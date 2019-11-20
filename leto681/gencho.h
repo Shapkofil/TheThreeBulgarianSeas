@@ -18,10 +18,11 @@ bool PAWNRules (Boardstate b,Piece p , int x ,int y)
         return true;
     }
     if((x1-x)=0&&!(p.isMoved)&& y1-y<=2)
-    {if{b.board[x1][y1]!=Piece.Type.Empty}
     {
-        return false;
-    }
+        if(b.board[x1][y1]!=Piece.Type.Empty)
+        {
+            return false;
+        }
         return true;
     }
     if((x1-x)=1&&(y1-y)=1)

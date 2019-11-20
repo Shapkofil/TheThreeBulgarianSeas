@@ -1,5 +1,9 @@
-#include <iostream>;
-#include <cctype>;
+#include <iostream>
+#include <cctype>
+
+#include "move.h"
+#include "boardstate.h"
+#include "piece.h"
 
 using namespace std;
 
@@ -7,6 +11,8 @@ using namespace std;
 int x1, y1, x2, y2;
 
 string desiredPiece, desiredPlace;
+
+
 
 char board[8][8] =
     // 'k' - White King, 'q' - White Queen, 'p' - White Pawn, 'n' - White Knight, 'r'- White Rook, 'b' - White Bishop
@@ -69,7 +75,21 @@ void draw() {
     cout<<"  A   B   C   D   E   F   G   H\n";
 }
 
-int main() {
+void turn(BoardState current)
+{
+    board = current.getChar();
     draw();
+    setDesiredPiece();
+    setDesiredPlace();
+    setCoordinates(desiredPiece,desiredPlace);
+    current = execute(current,x1,y1,x2,y2);
+}
+
+int main() {
+    BoardState current = BoardState();
+    while(true)
+    {
+        turn(current);
+    }
     return 0;
 }
