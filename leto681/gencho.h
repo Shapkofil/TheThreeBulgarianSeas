@@ -24,12 +24,14 @@ bool PAWNRules (BoardState b,Piece p , int x ,int y) {
         if(b.board[x][y].type != Piece::Type::EMPTY && b.board[x][y].color == p.color) return true;
     }
     if(b.board[x1][y1].type != Piece::Type::EMPTY) return false;
+    /* nikva ideq kvo pravi tova
     if(y1 == 7 || y1 == 0) {
         int h;
         cin>>h;
         b.board[x][y] = Piece(x,y,h,p.color);
     }
+    */
 }
 bool QUEENRules (BoardState b,Piece p ,int x , int y) {
-    return rookrules(p,x,y) || bishop(p,x,y);
+    return rookrules(p,x,y) || bishop(p,x,y); // no matching function to call to 'rookrules' + 'bishop'
 }
