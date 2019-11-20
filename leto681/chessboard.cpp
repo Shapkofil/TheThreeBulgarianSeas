@@ -2,8 +2,6 @@
 #include <cctype>
 
 #include "move.h"
-#include "boardstate.h"
-#include "piece.h"
 
 using namespace std;
 

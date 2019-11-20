@@ -7,13 +7,13 @@ class Piece
 public:
 	enum Type{EMPTY,PAWN,ROOK,KNIGHT,BISHOP,QUEEN,KING};
 	Type type;
-	bool color = false;
-	bool isMoved = false;
+	bool color;
+	bool isMoved;
 	int x,y;
-	Piece(int x = 0,int y = 0,Type type = Type.EMPTY,bool color = false,bool isMoved = false)
+	Piece(int x = 0,int y = 0,Type type = Type::EMPTY,bool color = false,bool isMoved = false)
 	{
 		this->x = x;
-		this->y = y; 
+		this->y = y;
 		this->type = type;
 		this->color = color;
 		this->isMoved = isMoved;
