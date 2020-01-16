@@ -1,7 +1,27 @@
+# FontTag
+	<font face="calibre" size="3" color"#773377">faggotshit</font>
+
+---
+
 # Marching Tag
 	<marquee scrollamount="" direction=""></marquee>
 
 ---
+
+# Frame set
+	<frameset cols(rows)="25%,*,25%">  
+		<frame src="frame_a.html">  
+		<frame src="frame_a.html">  
+		<frame src="frame_a.html">  
+	</frameset>  
+	
+---
+# Form
+	<form>
+	.
+	form elements
+	.
+	</form>
 
 # Dropdown
 	<select name="cars" multiple>  
@@ -41,12 +61,3 @@
 	  <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
 	  <input type="checkbox" name="vehicle2" value="Car"> I have a car
 	</form>
-
----
-
-# Frame set
-	<frameset cols(rows)="25%,*,25%">  
-		<frame src="frame_a.html">  
-		<frame src="frame_a.html">  
-		<frame src="frame_a.html">  
-	</frameset>  
